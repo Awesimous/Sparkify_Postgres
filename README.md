@@ -6,13 +6,12 @@ How do we do this? By accompanying you with the best-fit for your taste. We ensu
 
 # Startup the project
 
-The aim of the project is to create a database which is:
+The aim of the project is to empower our data analytics with the most effective structure possible.
+Therefore, we want a data infrastructure that can be:
 
 - easily accessible,
-- has a structure easy to understand,
-- can be analysed by standard SQL queries,
-
-so the analytics team can understand what songs users are listening to.
+- has a structure that is easy to understand,
+- can be analysed by standard SQL queries.
 
 # Point of Origin
 
