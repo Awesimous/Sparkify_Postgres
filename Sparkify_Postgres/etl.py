@@ -30,7 +30,6 @@ def process_log_file(cur, filepath):
         'sessionId': 'session_id', 'userAgent' : 'user_agent', 'ts': 'timestamp'}, inplace=True)
     # filter by NextSong action
     df = df[df.page == 'NextSong']
-
     # convert timestamp column to datetime
     t = df.timestamp
     
@@ -61,10 +60,9 @@ def process_log_file(cur, filepath):
             song_id, artist_id = results
         else:
             song_id, artist_id = None, None
-
         # insert songplay record
-        songplay_data = (row.session_id, row.timestamp, row.user_id, row.level, song_id, \
-            artist_id, row.session_id, row.location, row.user_agent)
+        songplay_data = [row.timestamp, row.user_id, row.level, song_id, \
+            artist_id, row.session_id, row.location, row.user_agent]
         cur.execute(songplay_table_insert, songplay_data)
 
 
