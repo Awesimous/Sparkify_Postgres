@@ -1,7 +1,7 @@
 # Introduction
 ## Sparkify
 
-Sparfiy strives for a world with more music!
+Sparkify strives for a world with more music!
 How do we do this? By accompanying you with the best-fit for your taste. We ensure that the music in your ears is just the right for you - whatever the situation and mood might be!
 
 # Startup the project
@@ -67,12 +67,14 @@ Each json file in the song_data dataset stores info about one song. The song_dat
 
 # Database Design
 
-***Fact table***
+## Fact table
 
 __Table name: songplays__
 Fields: songplay_id, start_time, user_id, level, session_id, location, user_agent, song_id, artist_id
 Datasource: log_data, song_data
 Dimensions
+
+## Dimension tables
 
 __Table name: users__
 Fields: user_id, first_name, last_name, gender, level
