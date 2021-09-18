@@ -6,6 +6,12 @@ from sql_queries import *
 import config
 
 def process_song_file(cur, filepath):
+    """[This function reads JSON file and insert record into Postgres Database]
+
+    Args:
+        cur ([object]): [Cursor for Postgres]
+        filepath ([string]): [Path to json file]
+    """    
     # open song file
     df = pd.read_json(filepath, lines=True)
     # Select columns
@@ -23,6 +29,12 @@ def process_song_file(cur, filepath):
 
 
 def process_log_file(cur, filepath):
+    """[This function reads JSON file and insert record into Postgres Database]
+
+    Args:
+        cur ([object]): [Cursor for Postgres]
+        filepath ([string]): [Path to json file]
+    """    
     # open log file
     df = pd.read_json(filepath, lines=True)
     df.ts = pd.to_datetime(df.ts,unit='ms')
@@ -53,7 +65,7 @@ def process_log_file(cur, filepath):
     for index, row in df.iterrows():
         
         # get songid and artistid from song and artist tables
-        cur.execute(song_select, (row.song, row.artist, row.length))
+        cur.execute(song_select, (row.artist, row.song, row.length))
         results = cur.fetchone()
         
         if results:
@@ -67,6 +79,14 @@ def process_log_file(cur, filepath):
 
 
 def process_data(cur, conn, filepath, func):
+    """[Function to process the data files]
+
+    Args:
+        cur ([object]): [database cursor]
+        conn ([object]): [database connection]
+        filepath ([string]): [filepath location]
+        func ([func]): [function call to be made]
+    """    
     # get all files matching extension from directory
     all_files = []
     for root, dirs, files in os.walk(filepath):
