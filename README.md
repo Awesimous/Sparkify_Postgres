@@ -91,3 +91,25 @@ __Table name: time__
 Fields: start_time, hour, day, week, month, year, weekday
 Datasource: log_data
 Files in repository
+
+## Explanation of files
+
+The project workspace includes six files:
+
+- test.ipynb displays the first few rows of each table to let you check your database.
+- create_tables.py drops and creates database tables. Resets tables prior to running the ETL- scripts.
+- etl.ipynb reads and processes a single file from song_data and log_data and loads the data into database tables
+- etl.py reads and processes files from song_data and log_data and loads them into tables.
+- sql_queries.py contains all the projects sql queries and refered to by create_tables.py and etl.py.
+- main.py driver function to execute create_tables and etl subsequently
+
+## How to run
+
+__Run the drive program main.py__
+
+python main.py
+
+__The create_tables.py and etl.py file can also be run independently__
+
+python create_tables.py 
+python etl.py 
