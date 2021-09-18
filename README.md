@@ -107,9 +107,10 @@ The project workspace includes six files:
 
 __Run the drive program main.py__
 
-python main.py
+- python main.py
+- lean back
 
 __The create_tables.py and etl.py file can also be run independently__
 
-python create_tables.py 
-python etl.py 
+- python create_tables.py 
+- python etl.py 
