@@ -68,6 +68,8 @@ Each json file in the song_data dataset stores info about one song. The song_dat
 
 ## Fact table
 
+<img width="806" alt="grafik" src="https://user-images.githubusercontent.com/29717043/134798326-eee23f4f-f145-4166-b586-552ff2f790b3.png">
+
 __Table name: songplays__
 Fields: songplay_id, start_time, user_id, level, session_id, location, user_agent, song_id, artist_id
 Datasource: log_data, song_data
