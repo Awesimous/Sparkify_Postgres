@@ -65,10 +65,15 @@ Each json file in the song_data dataset stores info about one song. The song_dat
 - song_data/A/A/B/TRAABJL12903CDCF1A.json 
 
 # Database Design
+<img width="806" alt="grafik" src="https://user-images.githubusercontent.com/29717043/134798326-eee23f4f-f145-4166-b586-552ff2f790b3.png">
+
+### Explanation of colors:
+- Grey: Table names
+- Red: VARCHAR
+- Yellow: INTEGER / FLOAT
+- Green: TIMESTAMP
 
 ## Fact table
-
-<img width="806" alt="grafik" src="https://user-images.githubusercontent.com/29717043/134798326-eee23f4f-f145-4166-b586-552ff2f790b3.png">
 
 __Table name: songplays__
 Fields: songplay_id, start_time, user_id, level, session_id, location, user_agent, song_id, artist_id
